@@ -1,0 +1,54 @@
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: #000000;
+     color: #ffffff;
+     font-family: 'Inter', sans-serif;
+     scroll-behavior: smooth;
+ }
+
+ ::-webkit-scrollbar {
+     width: 8px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: #000000;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: #1a1a1a;
+     border-radius: 4px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: #44b8b1;
+ }
+
+ .glass-nav {
+     background: rgba(0, 0, 0, 0.7);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+ }
+
+ .glass-card {
+     background: rgba(26, 26, 26, 0.6);
+     backdrop-filter: blur(16px);
+     -webkit-backdrop-filter: blur(16px);
+     border: 1px solid rgba(255, 255, 255, 0.05);
+ }
+
+ .hero-overlay {
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%);
+ }
+
+ .to-brand-purple {
+     --tw-gradient-to: #6408b8 var(--tw-gradient-to-position);
+     --tw-gradient-from: #44b8b1 var(--tw-gradient-from-position);
+     color: #fff;
+     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+ }
+
+ a{
+    scroll-behavior: smooth;
+ }
