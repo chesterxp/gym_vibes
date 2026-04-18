@@ -65,14 +65,14 @@
     <!-- 2. HERO -->
     <section id="hero" class="relative min-h-[900px] flex items-center justify-center pt-20">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover" src="./public/hero1.jpg" alt="Cinematic wide shot of a fit, confident female personal trainer in a modern, moody gym setting, dark atmospheric lighting, subtle teal and purple neon accents in background, high end photography">
+            <img class="w-full h-full object-cover" src="./hero1.jpg" alt="Cinematic wide shot of a fit, confident female personal trainer in a modern, moody gym setting, dark atmospheric lighting, subtle teal and purple neon accents in background, high end photography">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
         <div class="relative z-10 max-w-[1000px] mx-auto px-8 text-center mt-20">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card/80 border border-white/10 mb-8 backdrop-blur-sm">
                 <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                <span class="text-sm font-medium text-accent">Trenerka holistycznego podejścia do życia</span>
+                <span class="text-sm font-medium text-accent">Trenerka holistycznego podejścia do życia2</span>
             </div>
             
             <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
@@ -165,22 +165,22 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="aspect-[4/5] rounded-[32px] overflow-hidden relative z-10">
-                        <img class="w-full h-full object-cover transition-all duration-700" src="./public/about_me.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
+                        <img class="w-full h-full object-cover transition-all duration-700" src="./about_me.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
                     </div>
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-accent/10 rounded-full blur-3xl z-0"></div>
                     
                     <!-- Rating Badge -->
                     <div class="absolute bottom-8 -left-8 glass-card p-4 rounded-2xl z-20 flex items-center gap-4 shadow-2xl">
                         <div class="flex -space-x-2">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXJWszELA32bk2qTEMid_qfna5CNix8TmBXqa36LJCEd_lh19Re=s64-c-rp-mo-ba3-br100" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLEaD8VejTpw4gwRFxVmYHNlKTA991GxTZw-KiRY6rRwM5LAA=w72-h72-p-rp-mo-br100" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocItfdQ8A8X3TWFcYM7G7Wip8T0TE0hzcTZC7Wy5iZ3yvejSWg=s64-c-rp-mo-br100" class="w-10 h-10 rounded-full border-2 border-primary" alt="User">
                         </div>
                         <div>
                             <div class="flex text-accent text-sm">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-xs font-medium mt-1">5.0 na Google (120+ opinii)</p>
+                            <p class="text-xs font-medium mt-1">5.0 na Google</p>
                         </div>
                     </div>
                 </div>
@@ -215,71 +215,249 @@
     </section>
 
     <!-- 5. REZULTATY -->
-    <section id="rezultaty" class="py-32 bg-primary">
+    <section id="rezultaty" class="opinions py-32 bg-primary">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+
+            <div class="opinions__top flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Rezultaty</h2>
-                    <p class="text-textMuted text-lg max-w-xl">Liczby mówią same za siebie, ale to historie moich podopiecznych są największym sukcesem.</p>
+                    <p id="google-rating-summary" class="text-textMuted text-lg max-w-xl">Liczby mówią same za siebie, ale to historie moich podopiecznych są największym sukcesem.</p>
                 </div>
                 <div class="flex gap-4">
-                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-chevron-right"></i></button>
+                    <a id="google-reviews-link" href="https://www.google.com/search?sa=X&sca_esv=1b2e90cde7e2044e&rlz=1C1GCHA_plPL1183PL1183&biw=2056&bih=1233&sxsrf=ANbL-n47ugiUtqiu-zcBL9AF1V96g3FX-w:1776498394392&q=Aneta%20Zawi%C5%9Blak%20trenerka%20personalna%20doradca%20%C5%BCywieniowy%20Opinie&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTMwNTQ2MzA2MzW2tDQ1MDUy2MDI-IrRzjEvtSRRISqxPPPo7JzEbIWSotS81KLsRIWC1KLi_LzEnLxEhZT8osSU5ESFo3sqyzNT8zLzyysV_Asy8zJTF7FSaAAAUG_HipwAAAA&rldimm=5605136036539950520&tbm=lcl&hl=pl-PL&ved=0CAcQ5foLahcKEwig84me9PaTAxUAAAAAHQAAAAAQBQ#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT21WMlRFSm1lVkpITW5ab05FWk9ZWEZXYmxOYVVtYxAB" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center px-5 rounded-full border border-white/20 text-sm text-white hover:bg-white/10 transition-colors">Opinie w Google</a>
+                    <!-- <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-chevron-right"></i></button> -->
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="flex gap-1 text-accent mb-6 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-textMuted leading-relaxed mb-8">"Aneta to nie tylko trenerka, to prawdziwa mentorka. Zmieniła moje podejście do jedzenia – w końcu przestałam się bać węglowodanów, a moja sylwetka wygląda lepiej niż kiedykolwiek. Minus 12 kg i mnóstwo nowej energii!"</p>
-                    </div>
-                    <div class="flex items-center gap-4 border-t border-white/10 pt-6">
-                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg" class="w-12 h-12 rounded-full object-cover" alt="Kasia">
+            <div class="opinions__listWrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="opinions__list" >
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
                         <div>
-                            <p class="font-semibold text-white">Katarzyna M.</p>
-                            <p class="text-xs text-textMuted">Współpraca online (6 m-cy)</p>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">"Z całego serca polecam Anetę. To nie tylko wspaniała trenerka, ale też cudowna, pełna ciepła osoba. Na zajęciach tworzy atmosferę życzliwości i wsparcia, dzięki czemu każdy czuje się komfortowo i naprawdę zmotywowany. Jej energia sprawia, że trening staje się przyjemnością, a nie obowiązkiem - a to naprawdę sztuka 🥹 U Anety każdy trening jest dobrze przemyślany, różnorodny i daje ogrom satysfakcji. Aneta, potrafi dodać otuchy, poprawić humor i sprawić, że chce się wracać na kolejne zajęcia.</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXJWszELA32bk2qTEMid_qfna5CNix8TmBXqa36LJCEd_lh19Re=s64-c-rp-mo-ba3-br100" class="w-12 h-12 rounded-full object-cover" alt="Ewelina">
+                            <div>
+                                <p class="font-semibold text-white">Ewelina G</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Aneta jest niesamowitą trenerką! Jej treningi personalne są zawsze dopasowane do moich potrzeb i możliwości, dzięki czemu czuję realne postępy. Na zajęciach fitness panuje świetna atmosfera – pełna energii, motywacji i dobrej muzyki. Potrafi zmotywować nawet w najtrudniejszych momentach, a jej profesjonalizm i pasja sprawiają, że każdy trening to czysta przyjemność. Treningi są dopasowane do każdego poziomu zaawansowania. Polecam każdemu, kto szuka inspirującej i zaangażowanej trenerki!</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLEaD8VejTpw4gwRFxVmYHNlKTA991GxTZw-KiRY6rRwM5LAA=w72-h72-p-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Agnieszka">
+                            <div>
+                                <p class="font-semibold text-white">Agnieszka L</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Bardzo polecam Anetę - zarówno do treningów indywidualnych jak i zajęć grupowych Gym Vibes. Doceniam ją za skupienie na podopiecznych, indywidualny dobór rodzaju ćwiczeń i ich intensywności. Aneta ma fenomenalną inteligencję emocjonalną i potrafi odpowiednio zmotywować (raz pochwalić, raz pocisnąć, zawsze z szacunkiem i uśmiechem). Podoba mi się, że Aneta ciągle się rozwija i proponuje nowe aktywności.
+Na zajęciach grupowych klarownie wyjaśnia konkretne ćwiczenia i przygotowuje różne warianty w zależności od kondycji podopiecznych. Gym Vibes to jej autorski projekt i nie znam drugich tak ciekawych zajęć pełnych porządnego wysiłku, dobrej atmosfery, współpracy i radości. Tu nie ma nudy czy rutyny, jest za to dużo dobrej energii i satysfakcjonującego wysiłku. Wpadajcie!</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLJN9xJsawXfrPu_L2LKfAyvWxt_CtyViVJMxKUFWs0FFUFqg=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Paulina">
+                            <div>
+                                <p class="font-semibold text-white">Paulina R</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Z całego serca polecam zajęcia Gim Vibes i treningi personalne z Anetą. Wyróżnia ją nie tylko ogromna wiedza z zakresu treningu i żywienia, ale także niezwykła umiejętność słuchania. Profesjonalizm w czystej postaci, nieskończona cierpliwość i wsparcie. Podczas zajęć i treningów czuję, że moje bezpieczeństwo i dobre samopoczucie jest dla niej priorytetem. Zajęcia Gim Vibes z Anetą to moje pierwsze zajęcia wzmacniające. Dzięki nim pokochałam treningi siłowe i nie wyobrażam sobie niedzieli bez Gim Vibes. Więc jeśli szukasz trenera, który zmieni Twoje podejście do aktywności - właśnie go znalazłeś 🙂</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocItfdQ8A8X3TWFcYM7G7Wip8T0TE0hzcTZC7Wy5iZ3yvejSWg=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Joanna">
+                            <div>
+                                <p class="font-semibold text-white">Joanna J.</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Z ogromną przyjemnością polecam treningi prowadzone przez Anetę! To osoba pełna energii, pasji i profesjonalizmu, która potrafi zmotywować do działania nawet w te dni, kiedy brakuje chęci. Każdy trening – zarówno personalny, jak i grupowy – jest świetnie zaplanowany, dopasowany do możliwości uczestników i prowadzony w bardzo przyjaznej atmosferze.</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKtahtPFovHpD2MizAs11ugXTERzm9zdUxgrwwkIKYq6yMf=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Małgorzata">
+                            <div>
+                                <p class="font-semibold text-white">Małgorzata O</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Gym Vibes♥️♥️♥️
+To naprawdę świetny trening grupowy. Ćwiczenia są konkretne, skuteczne i dobrze przemyślane. Bardzo się cieszę, że kiedyś trafiłam na te zajęcia – od tamtej pory wracam regularnie. Za każdym razem czuję ogromną satysfakcję, a ten trening jest po prostu rewelacyjny.🔥</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLiiZ1Ri8MwhQtEpMNyaTT7N36bPwcc0yhC3GZ_KfHWs-sy7g=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="TashA">
+                            <div>
+                                <p class="font-semibold text-white">TashA Q</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Aneta to trenerka z ogromną pasją, zaangażowaniem i sercem do swojej pracy. To właśnie dzięki niej pokochałem siłownię i zupełnie zmieniłem swoje podejście do aktywności fizycznej. Mimo że teraz mieszkam za granicą, ciągle trzymam się planu i wciąż czuję jej wsparcie — Aneta potrafi zmotywować nawet na odległość.
+Jeśli ktoś szuka kogoś, kto naprawdę wierzy w swoich podopiecznych i umie wycisnąć z nich to, co najlepsze — polecam z całego serca! 💪🔥</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjW_LY6Hf136IHMOjeqJV697aTGeguX7gZgt3LoBBbzHo0MDNezb=s64-c-rp-mo-ba2-br100" class="w-12 h-12 rounded-full object-cover" alt="nordea">
+                            <div>
+                                <p class="font-semibold text-white">nordea Ka</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Totalnie polecam Anetę. Zarówno w kontekście treningów oraz wsparcia dietetycznego. Przerobiłem trochę dietetyków oraz trenerów ale tutaj znalazłem konkretne i kompletne wsparcie. Dieta rozpisana jasno, wzięte pod uwagę preferencje żywieniowe. Co mnie najbardziej urzekło to odniesienie do badań i stanu zdrowia. Pod wyniki ustawione wsparcie żywieniowe oraz suplementacyjne. Polecam serdecznie. Kontakt, wiedza oraz atmosfera - zdecydowanie mnie przekonują!!</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKNSIIU_8UVSBx-Ql2NTHLCW2QmzcxqZdbDHhFP_Jtge8qj3w=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Adrian">
+                            <div>
+                                <p class="font-semibold text-white">Adrian Dpt</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">O Anecie? - królowa tej siłowni jest tylko jedna! 🦾👑 Robi coś takiego, że chce się starać, nawet, jak się nie chce. W efekcie nie odwołałam żadnego umówionego treningu przez półtora roku. Dzięki!!! 🤗</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocJE9dFJZzjk4Ny1rCohjLv91-BGJuJqpLogMTK69Q7sb9N0Hg=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Małgosia">
+                            <div>
+                                <p class="font-semibold text-white">Małgosia L</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Aneta jest super osobą. Zawsze jak mam pytanie odpisuję i mnie uspokaja. A rozpiska to cud przy którym moje kilogramy spadają ☺️</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKwQDuVYXiw_zgRU_2iRnK6qpa-odwPd3fSkUFA2k1dwrCLjw=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="marcin">
+                            <div>
+                                <p class="font-semibold text-white">marcin f</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Daję 5* ale jak by się dało dałbym wiecej. Trenujemy z moją żoną pod okiem Anety już 2.5 roku.
+
+Zaczynaliśmy praktycznie od zera jako siłowniowe świerzaki i mimo tego że staż na siłowni mamy już dość długi to i tak Aneta potrafi zaskoczyć jakimś ćwiczeniem - dzięki temu nie możemy mówić o rutynie.
+
+Aneta jest bardzo zaangażowana a treningi z nią to nie tylko trening ciała ale też głowy. Po tym czasie nie tylko nasza siła i wygląd uległy zmianie ale też widzę pozytywne zmiany w naszej psychice.
+
+Całym sercem polecamy współpracę z Anetą.</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocIDoMHTmuYrENsV7v6WbPyjS4FCdxcU-54kjZW-47L9PhhlUg=s64-c-rp-mo-ba3-br100" class="w-12 h-12 rounded-full object-cover" alt="Piotr">
+                            <div>
+                                <p class="font-semibold text-white">Piotr P</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed">Z całego serca polecam treningi z Anetą! 💪
+
+Pełen profesjonalizm, ogromna wiedza i indywidualne podejście do każdej osoby. Na treningach zawsze panuje świetna atmosfera, dzięki czemu chce się wracać na kolejne zajęcia. Aneta nie tylko świetnie prowadzi treningi, ale też daje bardzo pomocne wskazówki dotyczące żywienia i skutecznie motywuje do działania.
+
+Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potrafi zarazić energią – trafił doskonale. Prawdziwa kobieta rakieta! 🚀</p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocJWYxVn5Gm-gbucfTjeTyJoWYNXik5jqQoozLpjuMFZVQNf2A=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Dorota S">
+                            <div>
+                                <p class="font-semibold text-white">Dorota S</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-accent mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="opinions__text text-textMuted leading-relaxed"></p>
+                        </div>
+                        <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
+                        <div class="flex items-center gap-4  pt-6">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocJWYxVn5Gm-gbucfTjeTyJoWYNXik5jqQoozLpjuMFZVQNf2A=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Ola G">
+                            <div>
+                                <p class="font-semibold text-white">Ola G</p>
+                                <p class="text-xs text-textMuted">Treningi personalne</p>
+                            </div>
+                        </div>
+                    </div>           
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="flex gap-1 text-accent mb-6 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-textMuted leading-relaxed mb-8">"Zgłosiłem się z ciągłym bólem pleców i brakiem siły. Po 3 miesiącach treningów personalnych ból zniknął, a ja czuję się silniejszy niż w wieku 20 lat. Profesjonalizm i ogromna wiedza na temat anatomii."</p>
-                    </div>
-                    <div class="flex items-center gap-4 border-t border-white/10 pt-6">
-                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" class="w-12 h-12 rounded-full object-cover" alt="Michał">
-                        <div>
-                            <p class="font-semibold text-white">Michał K.</p>
-                            <p class="text-xs text-textMuted">Treningi personalne</p>
-                        </div>
-                    </div>
-                </div>
+            </div>               
 
-                <!-- Testimonial 3 -->
-                <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="flex gap-1 text-accent mb-6 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-textMuted leading-relaxed mb-8">"Analiza moich badań krwi i dobrana suplementacja to był strzał w dziesiątkę. W końcu przestałam być ciągle zmęczona, poprawiła się cera, a waga sama zaczęła spadać. Polecam każdemu, kto szuka holistycznego podejścia."</p>
-                    </div>
-                    <div class="flex items-center gap-4 border-t border-white/10 pt-6">
-                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" class="w-12 h-12 rounded-full object-cover" alt="Anna">
-                        <div>
-                            <p class="font-semibold text-white">Anna W.</p>
-                            <p class="text-xs text-textMuted">Konsultacje zdrowotne</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -616,7 +794,7 @@
                     </a>
                 </div>
                 <div class="glass-card rounded-[32px] p-8 md:p-10">
-                  <img class="w-full h-full object-cover transition-all duration-700" src="./public/me2.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
+                  <img class="w-full h-full object-cover transition-all duration-700" src="./me2.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
                     <!-- <form class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
@@ -864,7 +1042,6 @@
         </div>
     </footer>
 
-    <!-- COMPLETE: 11/11 sections generated. -->
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
