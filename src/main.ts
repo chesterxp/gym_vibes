@@ -5,6 +5,7 @@ console.log('Gym Vibes');
 const init = () => {
   // const isMobileVariant = isMobile();
   addFAQEvents();
+  addEventForMenuButton();
 }
 
 const addFAQEvents = () => {
@@ -18,6 +19,16 @@ const addFAQEvents = () => {
           });
       }
   });
+}
+
+const addEventForMenuButton = () => {
+  const btn = document.querySelector('.menu__btn');
+  const menu = document.querySelector('.nav__list');
+
+  btn?.addEventListener('click', () => {
+      menu?.classList.toggle('nav__list--show');
+  });
+
 }
 
 // const isMobile = () => {
