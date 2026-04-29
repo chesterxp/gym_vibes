@@ -56,7 +56,7 @@ const currentYear = () => {
 
 const addPriceEvent = (isMobileVariant: boolean) => {
   const btns = document.querySelectorAll<HTMLElement>('.price__btn');
-  const priceList = document.querySelector(`.price__list`);
+  const priceList = document.querySelector<HTMLElement>('.price__list');
   const tabs = document.querySelectorAll<HTMLElement>('.price__tab');
 
   btns.forEach(btn => {
