@@ -42,6 +42,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.glass-card-fix {
+    border-radius: 0 100% 0 30px;
+}
+
+.glass-card-fix2{
+    border-radius: 0 30px 0 100%;
+}
+
 .hero-overlay {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%);
 }
@@ -81,6 +89,66 @@ body {
         }
     }
 }
+
+.price{
+    &__wrapper{
+        // height: 700px;
+        width: 100%;
+        padding: 50px 0;
+        overflow: hidden;
+         position: relative;
+    }
+
+    &__list{
+        display: flex;
+        width: 6400px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__helper{
+        text-align: center;
+        color: #44b8b1;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__tab{
+        transition: all 0.3s ease-in-out;
+        width: 1280px;
+        gap: 32px;
+        padding: 0 32px;
+
+        &Item{
+            // width: 307px;
+                height: fit-content;
+                min-height: 570px;
+        }
+    }
+
+    &__btn{
+        color: #fff;
+        transition: all 0.5s ease-in-out;
+        &--active {
+            --tw-bg-opacity: 1;
+            background-color: rgb(68 184 177 / var(--tw-bg-opacity, 1));
+            --tw-shadow: 0 0 15px rgba(68, 184, 177, 0.4);
+            --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    }
+
+    &__badge{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 30px;
+    }
+}
+
+// .glass-card{
+//     width: 307px;
+// }
 
 
 @media (max-width: 944px) {
@@ -132,6 +200,48 @@ body {
 
         &__linkSpecial {
             margin: 2rem 0 !important;
+        }
+    }
+
+    .price{
+
+        width: 100vw;
+        margin: 0;
+        padding: 24px;
+
+        &__wrapper{
+            height: auto;
+            width: 100%;
+        }
+        &__list{
+            width: 100%;
+        }
+        &__tab{
+            width: 100%;
+            // padding: 0 24px;
+            display: none;
+            // opacity: 0;
+            // z-index: -1;
+
+
+            &--active{
+                display: grid;
+                // opacity: 1;
+                // z-index: 1;
+            }
+        }
+        &__buttons{
+            &Panel{
+                display: flex;
+                flex-direction: column;
+                border: none;
+                border-radius: 0;
+                background: transparent;
+            }
+        }
+        &__btn{
+            margin: 8px 0;
+            border: 1px solid rgb(255 255 255 / 0.2);
         }
     }
 }

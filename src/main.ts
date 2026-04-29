@@ -7,6 +7,9 @@ const init = () => {
   const menu: HTMLElement | null = document.querySelector('.nav__list');
 
   addFAQEvents();
+  currentYear();
+  addPriceEvent(isMobileVariant);
+  
   if(menu && isMobileVariant) {
     addEventForMenuButton(menu);
     addEventForMenuLinks(menu);
@@ -47,4 +50,43 @@ const isMobile = () => {
   return window.innerWidth <= 944;
 }
 
+const currentYear = () => {
+  document.querySelectorAll('.currentYear').forEach(el => el.textContent = new Date().getFullYear().toString());
+}
+
+const addPriceEvent = (isMobileVariant: boolean) => {
+  const btns = document.querySelectorAll<HTMLElement>('.price__btn');
+  const priceList = document.querySelector(`.price__list`);
+  const tabs = document.querySelectorAll<HTMLElement>('.price__tab');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const number = btn.getAttribute('data-number');
+      removeActiveClassFromButtons(btns);
+      btn.classList.toggle('price__btn--active');
+
+      if(!isMobileVariant){
+        priceList?.style.setProperty('transform', `translateX(-${1280 * Number(number)}px)`);
+
+      } else{
+        removeActiveClasFromTabs(tabs);
+        const tab = document.querySelector(`.price__tab${number}`);
+        tab?.classList.add('price__tab--active');
+      }
+
+    });
+    
+  });
+}
+
+const removeActiveClasFromTabs = (tabs: NodeListOf<HTMLElement>) => {
+  tabs.forEach(tab => tab.classList.remove('price__tab--active'));
+}
+
+const removeActiveClassFromButtons = (btns: NodeListOf<HTMLElement>) => {
+  btns.forEach(btn => btn.classList.remove('price__btn--active'));
+ 
+}
+
 init();
+
