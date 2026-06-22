@@ -1,3 +1,4 @@
+import './tailwind.css'
 import './style.scss'
 
 console.log('Gym Vibes');

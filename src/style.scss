@@ -50,21 +50,24 @@ body {
     border-radius: 0 30px 0 100%;
 }
 
-.hero-overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%);
+.hero{
+    &__image{
+        filter: grayscale(1);
+    }
+    &-overlay{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #000000 100%);
+    }
 }
 
 .to-brand-purple {
-    --tw-gradient-to: #6408b8 var(--tw-gradient-to-position);
-    --tw-gradient-from: #44b8b1 var(--tw-gradient-from-position);
-    color: #fff;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    background: linear-gradient(90deg, #44b8b1 0%, #6408b8 100%);
+    background-clip: text;
 }
 
 .opinions {
     &__list {
         display: grid;
-        grid-template-columns: repeat(13, minmax(340px, 100%));
+        grid-template-columns: repeat(12, minmax(340px, 100%));
         gap: 2rem;
         padding-bottom: 2rem;
         overflow-x: auto;
@@ -117,11 +120,13 @@ body {
         width: 1280px;
         gap: 32px;
         padding: 0 32px;
+        display: flex;
 
         &Item{
             // width: 307px;
                 height: fit-content;
                 min-height: 570px;
+                flex: 1;
         }
     }
 
@@ -145,11 +150,6 @@ body {
         height: 30px;
     }
 }
-
-// .glass-card{
-//     width: 307px;
-// }
-
 
 @media (max-width: 944px) {
     .opinions {

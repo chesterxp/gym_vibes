@@ -10,29 +10,10 @@
           autoReplaceSvg: 'nest'
         };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#1a1a1a',
-                        accent: '#44b8b1',
-                        surface: '#242424',
-                        textMain: '#ffffff',
-                        textMuted: '#9ca3af'
-                    }
-                }
-            }
-        }
-    </script>
-  
+
   </head>
   <body class="antialiased selection:bg-accent selection:text-white">
 
@@ -65,7 +46,7 @@
     <!-- 2. HERO -->
     <section id="hero" class="relative min-h-[900px] flex items-center justify-center pt-20">
         <div class="absolute inset-0 z-0">
-            <picture>
+            <picture class="hero__image">
                 <source media="(max-width: 944px)" srcset="/foto1.jpg">
                 <img class="w-full h-full object-cover" src="./hero2.jpg" alt="Zdjęcie Anety trenującej podczas sesji treningowej">
             </picture>
@@ -1321,23 +1302,7 @@ Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potr
                             <p class="text-xs text-textMuted">Treningi personalne</p>
                         </div>
                     </div>
-                </div>   
-                <div class="opinions__item glass-card rounded-[24px] p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="flex gap-1 text-accent mb-6 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="opinions__text text-textMuted leading-relaxed"></p>
-                    </div>
-                    <!-- <div class="opinions__readMore">Czytaj wiecej</div> -->
-                    <div class="flex items-center gap-4  pt-6">
-                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJWYxVn5Gm-gbucfTjeTyJoWYNXik5jqQoozLpjuMFZVQNf2A=s64-c-rp-mo-br100" class="w-12 h-12 rounded-full object-cover" alt="Ola G">
-                        <div>
-                            <p class="font-semibold text-white">Ola G</p>
-                            <p class="text-xs text-textMuted">Treningi personalne</p>
-                        </div>
-                    </div>
-                </div>           
+                </div>             
             </div>
 
         </div>

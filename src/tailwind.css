@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@source "../index.html";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --color-primary: #000000;
+  --color-secondary: #1a1a1a;
+  --color-accent: #44b8b1;
+  --color-surface: #242424;
+  --color-textMain: #ffffff;
+  --color-textMuted: #9ca3af;
+  --color-brand-card: #242424;
+  --color-brand-teal: #44b8b1;
+  --color-brand-purple: #6408b8;
+}
