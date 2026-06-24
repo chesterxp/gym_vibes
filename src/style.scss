@@ -9,6 +9,8 @@ body {
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -167,6 +169,12 @@ body {
     }
 }
 
+.faq{
+    &__title{
+            font-size: 18px;
+        } 
+    }
+
 @media (max-width: 944px) {
     .hero{
         min-height: 700px;
@@ -200,7 +208,6 @@ body {
             }
         }
     }
-
     .nav {
         &__list {
             width: 100%;
@@ -238,7 +245,6 @@ body {
             margin: 2rem 0 !important;
         }
     }
-
     .price{
 
         width: 100vw;
@@ -279,5 +285,10 @@ body {
             margin: 8px 0;
             border: 1px solid rgb(255 255 255 / 0.2);
         }
+    }
+    .faq{
+        &__title{
+            font-size: 14px;
+        } 
     }
 }
