@@ -2,7 +2,6 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gym Vibes Aneta Zawiślak | Trenerka Holistyczna</title>
     <script>
@@ -10,19 +9,18 @@
           autoReplaceSvg: 'nest'
         };
     </script>
-    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 
   </head>
   <body class="antialiased selection:bg-accent selection:text-white">
 
     <!-- 1. NAVIGATION -->
-    <nav id="header" class="fixed w-full z-50 glass-nav transition-all duration-300 py-4">
+    <nav id="header" class="fixed w-full z-50 glass-nav transition-all duration-300 py-2">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-                <i class="fa-solid fa-leaf text-accent"></i>
-                Gym Vibes
+                <img src="./nav_logo.png" alt="Logo Gym Vibes" width="100" height="100">
             </a>
             <div class="nav__list hidden lg:flex items-center space-x-8">
                 <a href="#oferta" class="nav__link text-sm font-medium text-textMuted hover:text-white transition-colors">Oferta</a>
@@ -44,35 +42,35 @@
     </nav>
 
     <!-- 2. HERO -->
-    <section id="hero" class="relative min-h-[900px] flex items-center justify-center pt-20">
+    <section id="hero" class="hero relative flex justify-center pt-20">
         <div class="absolute inset-0 z-0">
             <picture class="hero__image">
-                <source media="(max-width: 944px)" srcset="/foto1.jpg">
-                <img class="w-full h-full object-cover" src="./hero2.jpg" alt="Zdjęcie Anety trenującej podczas sesji treningowej">
+                <source media="(max-width: 944px)" srcset="/hero_mobile.jpg">
+                <img class="w-full h-full object-cover" src="./hero_desktop.jpg" alt="Zdjęcie Anety trenującej podczas sesji treningowej">
             </picture>
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
-        <div class="relative z-10 max-w-[1000px] mx-auto px-8 text-center mt-20">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card/80 border border-white/10 mb-8 backdrop-blur-sm">
+        <div class="hero__content relative z-10 max-w-[1000px] mx-auto px-8 text-center">
+            <!-- <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card/80 border border-white/10 mb-8 backdrop-blur-sm">
                 <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
                 <span class="text-sm font-medium text-accent">Trenerka holistycznego podejścia do życia</span>
-            </div>
+            </div> -->
             
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
+            <h1 class="hero__title">
                 Zbuduj formę.<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-purple">Zadbaj o siebie świadomie.</span>
             </h1>
-            
-            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+
+            <p class="hero__subtitle text-gray-400 max-w-2xl mx-auto leading-relaxed">
                 Kompleksowe podejście do Twojego zdrowia. Trening, odżywianie i regeneracja dopasowane do Twojego stylu życia i wyników badań.
             </p>
             
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#oferta" class="w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-                    Poznaj ofertę <i class="fa-solid fa-arrow-right text-sm"></i>
+            <div class="hero__buttons flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#oferta" class="hero__button w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    Poznaj ofertę
                 </a>
-                <a href="#omnie" class="w-full sm:w-auto px-8 py-4 bg-brand-card text-white rounded-full font-semibold border border-white/10 hover:bg-white/5 transition-colors">
+                <a href="#omnie" class="hero__button  w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
                     O mnie
                 </a>
             </div>
@@ -298,7 +296,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        DOPISAC
+                        Pierwsza konsultacja trwa około 15 minut i odbywa się bezpłatnie. Poznajemy się, opowiadasz mi o swoich celach, historii zdrowotnej i stylu życia. Analizuję Twoje potrzeby i układamy plan współpracy dopasowany do Twoich możliwości i oczekiwań.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -307,7 +305,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        Dopisac
+                        Nie, absolutnie nie! Pracuję zarówno z początkującymi, jak i zaawansowanymi. Każdy trening dostosowuję do Twojego poziomu zaawansowania. Nauczę Cię techniki, będę czuwać nad bezpieczeństwem, a Ty będziesz się rozwijać w swoim tempie.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -316,7 +314,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        DOPISAC
+                        Plan treningowy jest elastyczny i ewoluuje razem z Tobą. Na początek ustalamy stały plan, ale co 4-6 tygodni dokonuję przeglądu postępów i wprowadzam zmiany, aby Twoje ciało wciąż się rozwijało i aby treningi nie stały się monotonne.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -325,7 +323,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        DPOPISAĆ
+                        Wcale nie! Moja dieta to nie restrykcje, a świadomy wybór. Nauczę Cię, jak jeść smacznie i zdrowotnie jednocześnie. Nie eliminuję ulubionych produktów, a raczej pokazuję, jak je balansować. Stawiamy na trwałe nawyki, a nie na tymczasowe ograniczenia.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -334,7 +332,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        Absolutnie nie. Właśnie po to jest wstępna konsultacja i analiza badań. Dostosowuję trening i żywienie do Twojego stanu zdrowia. W razie potrzeby współpracuję z fizjoterapeutami, aby zapewnić Ci maksymalne bezpieczeństwo.
+                        Wszystko zależy od Twoich możliwości i celów. Zaczynam od 2-3 treningów tygodniowo, ale możemy dostosować do Twojego harmonogramu. Nawet 20-30 minut konsekwentnej pracy przynosi wyniki - ważna jest regularność, a nie długość.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -343,7 +341,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        DOPISAĆ
+                        Tak, pracuję z kobietami w ciąży i po ciąży. Mam specjalne przygotowanie do pracy z ciężarnymi. Treningi są całkowicie bezpieczne i wspierają prawidłowy przebieg ciąży, zachowując formę fizyczną i dobre samopoczucie.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -352,7 +350,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        Absolutnie nie. Właśnie po to jest wstępna konsultacja i analiza badań. Dostosowuję trening i żywienie do Twojego stanu zdrowia. W razie potrzeby współpracuję z fizjoterapeutami, aby zapewnić Ci maksymalne bezpieczeństwo.
+                        Zalecam podstawowy panel krwi: morfologia, lipidogram, glukoza na czczo, TSH, witaminy D i B12, żelazo i GGTP. Są to testy, które pokazują stan zdrowia metabolicznego. Nie są obowiązkowe, ale pomogą mi lepiej Cię zrozumieć i dostosować plan do Twoich potrzeb.
                     </div>
                 </div>
                 <div class="fag_item border-b border-white/10 pb-4 group cursor-pointer">
@@ -361,7 +359,7 @@
                         <span class="faq_btn text-accent text-xl transition-transform duration-300 group-hover:rotate-180"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq_text text-textMuted text-sm leading-relaxed hidden">
-                        DOPISAĆ
+                        Tak, mam doświadczenie w pracy z osobami po kontuzjach. Każdy plan dostosowuję do Twojego stanu zdrowia i ograniczeń. W razie potrzeby współpracuję z fizjoterapeutami, aby zapewnić Ci maksymalne bezpieczeństwo i szybszą regenerację.
                     </div>
                 </div>
             </div>
@@ -1041,7 +1039,7 @@
                         <i class="fa-solid fa-briefcase-medical text-xl text-white group-hover:text-accent transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-white">Pakiety Wellness</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Kompleksowe programy wellness dostosowane do potrzeb Twojej firmy. Obejmują treningi dla pracowników, konsultacje żywieniowe i wsparcie w zdrowym stylu życia. Inwestycja w zdrowie zespołu to inwestycja w produktywność i satysfakcję pracowników</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -1050,7 +1048,7 @@
                         <i class="fa-solid fa-chalkboard-user text-xl text-white group-hover:text-accent transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-white">Warsztaty i Wykłady</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Edukacyjne warsztaty i wykłady na temat zdrowia, fitness i prawidłowego odżywiania. Prowadzę je bezpośrednio w Twojej firmie, dostosowując treść do potrzeb zespołu. Wspiera to budowanie świadomości zdrowotnej i motywacji do zmian.</p>
                 </div>
 
                 <!-- Card 3 -->
@@ -1059,7 +1057,7 @@
                         <i class="fa-solid fa-ticket text-xl text-white group-hover:text-accent transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-white">Vouchery Korporacyjne</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Oferuję specjalne pakiety voucherów dla pracowników, które mogą wykupić treningi indywidualne, konsultacje żywieniowe czy udział w zajęciach. To doskonały sposób na motywowanie zespołu i dbanie o ich wellbeing</p>
                 </div>
 
                 <!-- Card 4 -->
@@ -1068,7 +1066,7 @@
                         <i class="fa-solid fa-handshake text-xl text-white group-hover:text-accent transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-white">Partnerstwa</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed flex-grow">Rozwijamy długoterminowe partnerstwa z firmami, które chcą zbudować kulturę zdrowia. Wspólnie dostosowujemy programy do celów i budżetu firmy, zapewniając systematyczne wsparcie i monitorowanie postępów zespołu</p>
                 </div>
             </div>
             
@@ -1332,7 +1330,7 @@ Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potr
                             </div>
                             <div>
                                 <h4 class="text-sm text-textMuted mb-1">Lokalizacja</h4>
-                                <p class="text-lg font-medium">Warszawa, Polska<br/><span class="text-sm text-textMuted font-normal">Treningi: Oxygen Kazimierza Gierdziejewskiego, 02-496 Warszawa / Online</span></p>
+                                <p class="text-lg font-medium">Warszawa, Polska<br/><span class="text-sm text-textMuted font-normal">Treningi: Ul. Pola Karolińskie 4, 02-401 Warszawa / Online</span></p>
                             </div>
                         </div>
                     </div>
@@ -1343,7 +1341,7 @@ Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potr
                     </a>
                 </div>
                 <div class="glass-card rounded-[32px] p-8 md:p-10">
-                  <img class="w-full h-full object-cover transition-all duration-700" src="./me2.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
+                  <img class="w-full h-full object-cover transition-all duration-700" src="./about_me2.jpg" alt="Professional, cinematic portrait of a female personal trainer in dark premium athletic wear, confident calm expression, dark grey background, minimalist lighting" />
                     <!-- <form class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
@@ -1386,9 +1384,9 @@ Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potr
                     <h2 class="text-2xl font-bold tracking-tight text-white mb-6">Gym Vibes</h2>
                     <p class="text-gray-400 max-w-sm mb-8 font-light">Trenerka holistycznego podejścia do życia. Zbuduj ze mną formę, zdrowie i lepsze samopoczucie każdego dnia.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bruanetka/" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/aneta.banasiuk/" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-white/10 transition-colors border border-white/5"><i class="fa-brands fa-youtube"></i></a> -->
                     </div>
                 </div>
                 
@@ -1410,7 +1408,7 @@ Jeśli ktoś szuka trenerki, która naprawdę wspiera w osiąganiu celów i potr
                         <li><a href="#" class="hover:text-white transition-colors">Regulamin treningów</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Oświadczenie zdrowotne</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Zgoda opiekuna</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Polityka prywatności</a></li>
+                        <li><a href="/documents/Polityka_prywatnosci.pdf" target="_blank" class="hover:text-white transition-colors">Polityka prywatności</a></li>
                     </ul>
                 </div>
             </div>

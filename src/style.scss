@@ -51,6 +51,22 @@ body {
 }
 
 .hero{
+    min-height: 900px;
+
+    &__content{
+        margin-top: 200px;
+    }
+    &__title{
+        font-size: 96px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        line-height: 1.1;
+    }
+
+    &__subtitle{
+        font-size: 22px;
+        margin-bottom: 48px;
+    }
     &__image{
         filter: grayscale(1);
     }
@@ -152,6 +168,26 @@ body {
 }
 
 @media (max-width: 944px) {
+    .hero{
+        min-height: 700px;
+       
+        &__content{
+            margin-top: 80px;
+        }
+        &__title{
+            font-size: 38px;
+            margin-bottom: 72px;
+        }
+        &__subtitle{
+            font-size: 16px;
+            margin-bottom: 72px;
+        }
+        &__button{
+            width: 80%;
+            font-size: 14px;
+            padding: 16px;
+        }
+    }
     .opinions {
         &__list {
             grid-template-columns: repeat(7, minmax(313px, 100%));
