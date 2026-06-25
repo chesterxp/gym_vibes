@@ -74,6 +74,23 @@
         .date-row {
             margin-top: 30px;
             font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .date-row input[type="date"] {
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+            min-width: 150px;
+        }
+        .date-row input[type="date"]:focus {
+            background: #f9f9f9;
         }
         hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
         @media print {
@@ -100,7 +117,7 @@
     <button class="print-btn no-print" onclick="window.print()">Drukuj / Zapisz PDF</button>
 
     <h1>Regulamin Treningów Personalnych</h1>
-    <p class="subtitle">Gym Vibes Aneta Zawiślak &nbsp;|&nbsp; Ul. Pola Karolińskie 4, 02-401 Warszawa &nbsp;|&nbsp; azaw88@wp.pl</p>
+    <p class="subtitle">Gym Vibes Aneta Zawiślak &nbsp;|&nbsp; NIP 823 157 68 85 &nbsp;|&nbsp; azaw88@wp.pl</p>
 
     <hr>
 
@@ -216,7 +233,7 @@
 
     <!-- DATA -->
     <div class="date-row">
-        Warszawa, dnia: &nbsp;_______________________________
+        Warszawa, dnia: &nbsp;<input type="date">
     </div>
 
     <!-- PODPISY -->
@@ -238,7 +255,7 @@
     </div>
 
     <p style="margin-top:40px; font-size:10px; color:#888; text-align:center;">
-        Gym Vibes Aneta Zawiślak &nbsp;·&nbsp; Ul. Pola Karolińskie 4, 02-401 Warszawa &nbsp;·&nbsp; azaw88@wp.pl
+        Gym Vibes Aneta Zawiślak &nbsp;·&nbsp; NIP 823 157 68 85 &nbsp;·&nbsp; azaw88@wp.pl
     </p>
 
 </body>

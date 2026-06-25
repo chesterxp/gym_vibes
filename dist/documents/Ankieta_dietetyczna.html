@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankieta Dietetyczna – Gym Vibes Aneta Zawiślak</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fff;
+            padding: 40px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 24px 0 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+        }
+        p, li { margin-bottom: 6px; }
+        ol, ul { padding-left: 20px; }
+        .section { margin-bottom: 16px; }
+        .field-block { margin: 10px 0 6px; }
+        .field-label {
+            font-size: 11px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 2px;
+        }
+        .field-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+        }
+        .field-textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+            resize: vertical;
+            display: block;
+            min-height: 52px;
+        }
+        .field-input:focus, .field-textarea:focus {
+            background: #f9f9f9;
+        }
+        .fields-row {
+            display: flex;
+            gap: 4%;
+            margin: 10px 0 6px;
+        }
+        .fields-row .field-col { flex: 1; }
+        .question-block {
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #ddd;
+        }
+        .question-block:last-child { border-bottom: none; }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .answer-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 6px 0 2px;
+            flex-wrap: wrap;
+        }
+        .answer-row label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .checkbox-row input[type="checkbox"] {
+            margin-top: 3px;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+        }
+        .info-box {
+            background: #f0f7ff;
+            border-left: 3px solid #2a7ae4;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 12px;
+            color: #1a3a5c;
+        }
+        .checkbox-section {
+            margin-top: 20px;
+            border: 1px solid #bbb;
+            padding: 16px 20px;
+            border-radius: 4px;
+        }
+        .checkbox-section-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        .signature-block {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .signature-box {
+            flex: 1;
+            border-top: 1px solid #333;
+            padding-top: 8px;
+            font-size: 11px;
+            color: #444;
+            text-align: center;
+        }
+        .note {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+        @media print {
+            body { padding: 20px; }
+            .no-print { display: none; }
+            .field-input, .field-textarea { background: transparent !important; }
+        }
+        .print-btn {
+            display: block;
+            margin: 0 auto 30px;
+            padding: 10px 28px;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        .print-btn:hover { background: #333; }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Drukuj / Zapisz PDF</button>
+
+    <h1>Ankieta Dietetyczna</h1>
+    <p class="subtitle">Gym Vibes Aneta Zawiślak | Formularz przed ułożeniem jadłospisu</p>
+
+    <div class="info-box">
+        Dziękuję za uzupełnienie ankiety. Im dokładniejsze odpowiedzi, tym lepiej dopasuję plan żywieniowy do Twojego zdrowia, celu i stylu życia.
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>I. Dane podstawowe</h2>
+
+        <div class="field-block">
+            <div class="field-label">Imię i nazwisko</div>
+            <input type="text" class="field-input" autocomplete="name">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Adres e-mail</div>
+                <input type="email" class="field-input" autocomplete="email">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Numer telefonu (opcjonalnie)</div>
+                <input type="tel" class="field-input" autocomplete="tel">
+            </div>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Data urodzenia</div>
+                <input type="date" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Wiek</div>
+                <input type="text" class="field-input" placeholder="lat">
+            </div>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Wzrost (cm)</div>
+                <input type="text" class="field-input" placeholder="cm">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Aktualna masa ciała (kg)</div>
+                <input type="text" class="field-input" placeholder="kg">
+            </div>
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Obwody ciała (opcjonalnie: talia, biodra, udo)</div>
+            <input type="text" class="field-input">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>II. Cel współpracy</h2>
+
+        <div class="question-block">
+            <div class="question-text">1. Jaki jest Twój główny cel?</div>
+            <div class="field-label">(np. redukcja, poprawa zdrowia, zwiększenie masy mięśniowej, lepsze samopoczucie)</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">2. Na jakim efekcie zależy Ci najbardziej w najbliższych 8-12 tygodniach?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">3. Czy masz konkretny termin realizacji celu (np. zawody, wydarzenie)?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>III. Tryb życia i aktywność</h2>
+
+        <div class="question-block">
+            <div class="question-text">4. Jaki masz charakter pracy?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="work_type" value="siedzaca"> Siedząca</label>
+                <label><input type="radio" name="work_type" value="stojaca"> Stojąca</label>
+                <label><input type="radio" name="work_type" value="fizyczna"> Fizyczna</label>
+                <label><input type="radio" name="work_type" value="zmianowa"> Zmianowa</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">5. Jak wygląda Twój typowy dzień? (godzina pobudki, pracy, snu, pory posiłków)</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">6. Ile razy w tygodniu trenujesz i jakie są to treningi?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">7. Ile kroków dziennie wykonujesz średnio (jeśli korzystasz ze smartwatcha/opaski)?</div>
+            <input type="text" class="field-input" style="margin-top:4px;" placeholder="np. 8000-10000">
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">8. Jaka jest Twoja aktywność poza treningami?</div>
+            <input type="text" class="field-input" style="margin-top:4px;" placeholder="np. spacery, rower, brak dodatkowej aktywności">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>IV. Aktualny sposób żywienia</h2>
+
+        <div class="question-block">
+            <div class="question-text">9. Opisz 2 przykładowe dni jedzenia i picia (godziny, porcje, napoje, przekąski, dodatki).</div>
+            <div class="field-label">Dzień 1</div>
+            <textarea class="field-textarea" rows="4" style="margin-top:4px;"></textarea>
+            <div class="field-label" style="margin-top:10px;">Dzień 2</div>
+            <textarea class="field-textarea" rows="4" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">10. Czy liczysz kalorie? Jeśli tak, ile średnio spożywasz obecnie?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">11. Ile posiłków dziennie zwykle jesz?</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">12. O których porach najczęściej jesz?</div>
+                <input type="text" class="field-input">
+            </div>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">13. Czy występują napady głodu, podjadanie lub silna ochota na słodycze? Jeśli tak, kiedy najczęściej?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>V. Preferencje żywieniowe</h2>
+
+        <div class="question-block">
+            <div class="question-text">14. Jakich produktów nie lubisz lub nie chcesz jeść?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">15. Jakie produkty lubisz najbardziej i chcesz je uwzględnić w planie?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">16. Wolisz posiłki:</div>
+            <div class="answer-row">
+                <label><input type="radio" name="taste_pref" value="slodkie"> Na słodko</label>
+                <label><input type="radio" name="taste_pref" value="wytrawne"> Wytrawne</label>
+                <label><input type="radio" name="taste_pref" value="mix"> Mieszane</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">17. Czy spożywasz nabiał i jak na niego reagujesz?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">18. Czy stosujesz konkretny model żywienia?</div>
+            <input type="text" class="field-input" style="margin-top:4px;" placeholder="np. wegetariański, bezglutenowy, low carb">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">19. W jakich sklepach najczęściej robisz zakupy?</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">20. Budżet tygodniowy na zakupy spożywcze</div>
+                <input type="text" class="field-input" placeholder="PLN/tydzień">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>VI. Zdrowie i samopoczucie</h2>
+
+        <div class="question-block">
+            <div class="question-text">21. Czy masz zdiagnozowane choroby? Jeśli tak, jakie?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">22. Czy masz alergie lub nietolerancje pokarmowe?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">23. Czy po konkretnych produktach pojawiają się dolegliwości (wzdęcia, gazy, bóle brzucha, zaparcia, biegunki, refluks)?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">24. Czy wypróżniasz się regularnie?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="bowel" value="tak"> Tak</label>
+                <label><input type="radio" name="bowel" value="nie"> Nie</label>
+                <label><input type="radio" name="bowel" value="czasem"> Różnie</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">25. Jak oceniasz swoje samopoczucie, poziom energii i jakość snu?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">26. Poziom stresu (skala 1-10)</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">27. Ilość wypijanej wody dziennie</div>
+                <input type="text" class="field-input" placeholder="np. 2 litry">
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">28. Czy palisz papierosy lub używasz nikotyny?</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">29. Czy pijesz alkohol? Jeśli tak, jaki i ile tygodniowo?</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">30. Czy pijesz kawę? Jaką, ile i z jakimi dodatkami?</div>
+                <input type="text" class="field-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>VII. Leki, suplementy i badania</h2>
+
+        <div class="question-block">
+            <div class="question-text">31. Czy przyjmujesz na stałe leki? Jeśli tak, jakie i o jakich porach?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">32. Czy stosujesz suplementy? (nazwa, dawka, pora stosowania)</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">33. Czy posiadasz aktualne badania krwi?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="labs_have" value="tak"> Tak</label>
+                <label><input type="radio" name="labs_have" value="nie"> Nie</label>
+            </div>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">34. Czy masz możliwość wykonania badań, jeśli będzie to potrzebne?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="labs_possible" value="tak"> Tak</label>
+                <label><input type="radio" name="labs_possible" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:8px;">Zalecany panel: morfologia z rozmazem, mocz, TSH, FT3, FT4, lipidogram, ALT, AST, lipaza, żelazo, wit. D, glukoza i insulina na czczo, CRP.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>VIII. Organizacja i możliwości</h2>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">35. Jak często gotujesz?</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">36. Ile czasu realnie możesz przeznaczyć na przygotowanie posiłków?</div>
+                <input type="text" class="field-input">
+            </div>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">37. Czy możesz zabierać posiłki do pracy/szkoły?</div>
+                <input type="text" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">38. Czy plan ma obejmować też domowników?</div>
+                <input type="text" class="field-input">
+            </div>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">39. Czy masz dostęp do podstawowego sprzętu kuchennego?</div>
+            <input type="text" class="field-input" style="margin-top:4px;" placeholder="np. piekarnik, blender, mikrofalówka, pojemniki">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>IX. Dotychczasowe doświadczenia</h2>
+
+        <div class="question-block">
+            <div class="question-text">40. Czy wcześniej stosowałeś/stosowałaś diety? Jakie i z jakim efektem?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">41. Co było dla Ciebie najtrudniejsze w utrzymaniu diety?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">42. Co pomaga Ci trzymać się planu?</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>X. Informacje dodatkowe</h2>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">43. Czy jest coś jeszcze, co powinnam wiedzieć, aby dobrze dopasować jadłospis?</div>
+            <textarea class="field-textarea" rows="4" style="margin-top:4px;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>XI. Oświadczenie</h2>
+
+        <div class="checkbox-section">
+            <div class="checkbox-section-title">Potwierdzenia i zgody</div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_data">
+                <label for="confirm_data">Oświadczam, że podane przeze mnie informacje są zgodne z prawdą, kompletne i zostały przekazane w celu indywidualnego dopasowania planu żywieniowego.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_medical">
+                <label for="confirm_medical">Przyjmuję do wiadomości, że jadłospis i zalecenia żywieniowe mają charakter edukacyjno-wspierający i nie stanowią porady lekarskiej ani diagnostyki medycznej.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_doctor">
+                <label for="confirm_doctor">W przypadku chorób, dolegliwości, pogorszenia samopoczucia lub niepokojących objawów zobowiązuję się do konsultacji z lekarzem oraz do niezwłocznego poinformowania Trenerki o zmianie stanu zdrowia.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_changes">
+                <label for="confirm_changes">Zobowiązuję się do bieżącego informowania o zmianach dotyczących leków, suplementacji, wyników badań i innych czynników mających wpływ na realizację planu.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_results">
+                <label for="confirm_results">Rozumiem, że efekty współpracy zależą m.in. od regularności, stosowania zaleceń i czynników indywidualnych, dlatego Trenerka nie gwarantuje osiągnięcia konkretnego rezultatu w określonym czasie.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_liability">
+                <label for="confirm_liability">Przyjmuję do wiadomości, że Trenerka nie ponosi odpowiedzialności za skutki wynikające z zatajenia istotnych informacji zdrowotnych, podania nieprawdziwych danych lub niestosowania się do zaleceń.</label>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirm_rodo">
+                <label for="confirm_rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych i informacji zdrowotnych przez Gym Vibes Aneta Zawiślak wyłącznie w celu realizacji współpracy, zgodnie z obowiązującymi przepisami RODO.</label>
+            </div>
+        </div>
+
+        <div class="fields-row" style="margin-top:24px;">
+            <div class="field-col">
+                <div class="field-label">Data</div>
+                <input type="date" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Miejscowość</div>
+                <input type="text" class="field-input">
+            </div>
+        </div>
+
+        <div class="signature-block">
+            <div class="signature-box">
+                <div style="min-height:40px;"></div>
+                Czytelny podpis Podopiecznego
+            </div>
+            <div class="signature-box">
+                <div style="min-height:40px;"></div>
+                Podpis Trenerki (potwierdzenie przyjęcia)
+            </div>
+        </div>
+    </div>
+
+    <p class="note" style="margin-top: 24px; text-align: center;">Dokument sporządzono w dwóch jednobrzmiących egzemplarzach – po jednym dla każdej ze stron.</p>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zgoda Rodzica/Opiekuna na Trening – Gym Vibes Aneta Zawiślak</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fff;
+            padding: 40px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 24px 0 8px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+        }
+        p, li { margin-bottom: 6px; }
+        ol, ul { padding-left: 20px; }
+        .section { margin-bottom: 16px; }
+        .field-block { margin: 10px 0 4px; }
+        .field-label {
+            font-size: 11px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 2px;
+        }
+        .field-line {
+            border-bottom: 1px solid #333;
+            min-height: 26px;
+            width: 100%;
+        }
+        .field-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+        }
+        .field-textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+            resize: vertical;
+            display: block;
+            min-height: 52px;
+        }
+        .field-input:focus, .field-textarea:focus {
+            background: #f9f9f9;
+        }
+        .fields-row {
+            display: flex;
+            gap: 4%;
+            margin: 10px 0 4px;
+        }
+        .fields-row .field-col { flex: 1; }
+        .checkbox-section {
+            margin-top: 20px;
+            border: 1px solid #bbb;
+            padding: 16px 20px;
+            border-radius: 4px;
+        }
+        .checkbox-section-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .checkbox-row input[type="checkbox"] {
+            margin-top: 3px;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+        }
+        .answer-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 6px 0 2px;
+            flex-wrap: wrap;
+        }
+        .answer-row label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .question-block {
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #ddd;
+        }
+        .question-block:last-child { border-bottom: none; }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .rodo-box {
+            margin-top: 24px;
+            background: #f7f7f7;
+            border: 1px solid #ccc;
+            padding: 14px 18px;
+            font-size: 11px;
+            line-height: 1.6;
+            color: #444;
+            border-radius: 4px;
+        }
+        .rodo-box strong { color: #1a1a1a; }
+        .signature-block {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .signature-box {
+            flex: 1;
+            border-top: 1px solid #333;
+            padding-top: 8px;
+            font-size: 11px;
+            color: #444;
+            text-align: center;
+        }
+        .date-row {
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+        .note {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        .info-box {
+            background: #f0f7ff;
+            border-left: 3px solid #2a7ae4;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 12px;
+            color: #1a3a5c;
+        }
+        .warning-box {
+            background: #fff8e1;
+            border-left: 3px solid #f0a500;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 12px;
+            color: #5a4000;
+        }
+        @media print {
+            body { padding: 20px; }
+            .no-print { display: none; }
+            .field-input, .field-textarea { background: transparent !important; }
+        }
+        .print-btn {
+            display: block;
+            margin: 0 auto 30px;
+            padding: 10px 28px;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        .print-btn:hover { background: #333; }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Drukuj / Zapisz PDF</button>
+
+    <h1>Wyrażenie Zgody Rodzica / Opiekuna Prawnego<br>na Udział Nieletniego w Treningach</h1>
+    <p class="subtitle">Gym Vibes Aneta Zawiślak &nbsp;|&nbsp; NIP 823 157 68 85 &nbsp;|&nbsp; azaw88@wp.pl</p>
+
+    <hr>
+
+    <div class="info-box">
+        Niniejszy dokument jest wymagany przed rozpoczęciem treningów przez osoby niepełnoletnie. Prosimy o dokładne wypełnienie wszystkich punktów. Podpisany formularz należy dostarczyć Trenerce przed pierwszym treningiem – osobiście lub drogą elektroniczną (skan/zdjęcie na adres: azaw88@wp.pl).
+    </div>
+
+    <!-- DANE DZIECKA -->
+    <div class="section">
+        <h2>I. Dane dziecka / podopiecznego</h2>
+
+        <div class="field-block">
+            <div class="field-label">Imię i nazwisko dziecka</div>
+            <input type="text" class="field-input" autocomplete="name">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Data urodzenia</div>
+                <input type="date" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Wiek</div>
+                <input type="text" class="field-input" placeholder="lat">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Płeć</div>
+                <input type="text" class="field-input" placeholder="np. dziewczynka / chłopiec">
+            </div>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Wzrost (cm)</div>
+                <input type="text" class="field-input" placeholder="cm">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Masa ciała (kg)</div>
+                <input type="text" class="field-input" placeholder="kg">
+            </div>
+        </div>
+    </div>
+
+    <!-- DANE RODZICA / OPIEKUNA -->
+    <div class="section">
+        <h2>II. Dane rodzica / opiekuna prawnego</h2>
+
+        <div class="field-block">
+            <div class="field-label">Imię i nazwisko rodzica / opiekuna</div>
+            <input type="text" class="field-input" autocomplete="name">
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Stopień pokrewieństwa (np. matka, ojciec, opiekun prawny)</div>
+            <input type="text" class="field-input" placeholder="np. matka, ojciec, opiekun prawny">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Numer telefonu</div>
+                <input type="tel" class="field-input" autocomplete="tel">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Adres e-mail</div>
+                <input type="email" class="field-input" autocomplete="email">
+            </div>
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Adres zamieszkania</div>
+            <input type="text" class="field-input" autocomplete="street-address">
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Numer telefonu alarmowego (inny opiekun / drugie z rodziców)</div>
+            <input type="tel" class="field-input">
+        </div>
+    </div>
+
+    <!-- INFORMACJE ZDROWOTNE DZIECKA -->
+    <div class="section">
+        <h2>III. Informacje zdrowotne dziecka</h2>
+
+        <div class="warning-box">
+            Prosimy o rzetelne wypełnienie tej sekcji. Informacje te są niezbędne do zapewnienia bezpieczeństwa dziecka podczas treningów. Zatajenie istotnych danych zdrowotnych zwalnia Trenerkę z odpowiedzialności za urazy lub niepożądane reakcje.
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">1. Czy dziecko pozostaje pod stałą opieką lekarza?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q1" value="tak"> Tak</label>
+                <label><input type="radio" name="q1" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, z jakiego powodu:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">2. Czy dziecko ma zdiagnozowane choroby przewlekłe lub inne schorzenia?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q2" value="tak"> Tak</label>
+                <label><input type="radio" name="q2" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, jakie:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">3. Czy dziecko ma problemy z układem sercowo-naczyniowym, astmę lub inne choroby układu oddechowego?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q3" value="tak"> Tak</label>
+                <label><input type="radio" name="q3" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">4. Czy dziecko kiedykolwiek straciło przytomność podczas wysiłku lub odczuwało silne kołatanie serca / zawroty głowy?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q4" value="tak"> Tak</label>
+                <label><input type="radio" name="q4" value="nie"> Nie</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">5. Czy dziecko ma aktualne kontuzje, bóle kręgosłupa, stawów lub inne dolegliwości układu ruchu?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q5" value="tak"> Tak</label>
+                <label><input type="radio" name="q5" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz (lokalizacja, charakter, od kiedy):</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">6. Czy dziecko miało zabiegi operacyjne lub poważne urazy w ciągu ostatnich 2 lat?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q6" value="tak"> Tak</label>
+                <label><input type="radio" name="q6" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">7. Czy dziecko przyjmuje na stałe leki lub suplementy?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q7" value="tak"> Tak</label>
+                <label><input type="radio" name="q7" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, wymień (nazwa, dawka, pora):</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">8. Czy dziecko ma alergie (pokarmowe, lekowe, na jad owadów lub inne)?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q8" value="tak"> Tak</label>
+                <label><input type="radio" name="q8" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, wymień i podaj, czy dziecko posiada przy sobie EpiPen lub inne leki ratunkowe:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">9. Czy dziecko jest w spektrum neuroróżnorodności (ADHD, autyzm, dyspraksja lub inne)?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q9" value="tak"> Tak</label>
+                <label><input type="radio" name="q9" value="nie"> Nie</label>
+                <label><input type="radio" name="q9" value="wol"> Wolę nie odpowiadać</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Wskazówki dla Trenerki dotyczące komunikacji lub pracy z dzieckiem:</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">10. Czy dziecko ma dotychczasowe doświadczenia z aktywnością fizyczną / sportem?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q10" value="tak"> Tak</label>
+                <label><input type="radio" name="q10" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, jakie dyscypliny i od jak dawna:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">11. Inne ważne informacje, które Trenerka powinna znać:</div>
+            <textarea class="field-textarea" rows="5" style="margin-top:8px;"></textarea>
+        </div>
+    </div>
+
+    <!-- ZGODY -->
+    <div class="section">
+        <h2>IV. Wyrażenie zgody i oświadczenia</h2>
+
+        <div class="checkbox-section">
+            <div class="checkbox-section-title">Jako rodzic / opiekun prawny niniejszym:</div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl1">
+                <label for="decl1"><strong>Wyrażam zgodę</strong> na udział mojego dziecka / podopiecznego w treningach prowadzonych przez Anetę Zawiślak w ramach marki Gym Vibes.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl2">
+                <label for="decl2"><strong>Oświadczam</strong>, że dziecko nie ma przeciwwskazań zdrowotnych do podjęcia aktywności fizycznej. W przypadku wątpliwości skonsultowałem/skonsultowałam tę kwestię z lekarzem pediatrą lub lekarzem sportowym.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl3">
+                <label for="decl3"><strong>Oświadczam</strong>, że wszystkie informacje zawarte w niniejszym dokumencie są zgodne z prawdą i zobowiązuję się do informowania Trenerki o wszelkich zmianach stanu zdrowia dziecka.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl4">
+                <label for="decl4"><strong>Przyjmuję do wiadomości</strong>, że Trenerka nie jest lekarzem i jej zalecenia nie zastępują porady medycznej. W przypadku jakichkolwiek wątpliwości zdrowotnych zobowiązuję się do konsultacji z właściwym specjalistą.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl5">
+                <label for="decl5"><strong>Wyrażam zgodę</strong> na udzielenie dziecku pierwszej pomocy przez Trenerkę lub służby ratownicze w sytuacji zagrożenia zdrowia lub życia, gdy nie ma możliwości wcześniejszego kontaktu ze mną.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl6">
+                <label for="decl6"><strong>Wyrażam zgodę</strong> na przetwarzanie danych osobowych dziecka oraz moich danych jako opiekuna przez Anetę Zawiślak (Gym Vibes) w celu realizacji usług treningowych, zgodnie z Rozporządzeniem RODO (UE) 2016/679. Dane nie będą przekazywane osobom trzecim.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl7">
+                <label for="decl7"><strong>Wyrażam zgodę</strong> na dokumentowanie postępów dziecka (notatki, pomiary) przez Trenerkę na potrzeby wewnętrzne związane z prowadzeniem zajęć.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl8">
+                <label for="decl8" style="font-style: italic; color: #555;">(Opcjonalnie) Wyrażam zgodę na publikację zdjęć/nagrań z treningów dziecka w mediach społecznościowych Gym Vibes (Instagram, Facebook) bez wynagrodzenia. Dziecko będzie anonimowe lub oznaczone wyłącznie imieniem, jeżeli wyrazi na to zgodę.</label>
+            </div>
+        </div>
+
+        <div class="rodo-box">
+            <strong>Klauzula informacyjna RODO:</strong> Administratorem danych osobowych Państwa dziecka oraz Państwa jako opiekuna jest Aneta Zawiślak prowadząca działalność pod marką Gym Vibes, NIP 823 157 68 85, e-mail: azaw88@wp.pl. Dane przetwarzane są w celu realizacji umowy o świadczenie usług treningowych (art. 6 ust. 1 lit. b RODO) oraz – w zakresie danych dotyczących zdrowia dziecka – na podstawie Państwa wyraźnej zgody jako opiekuna prawnego (art. 9 ust. 2 lit. a RODO). Przysługuje Państwu prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem.
+        </div>
+    </div>
+
+    <!-- DATA I PODPIS -->
+    <div class="date-row" style="display:flex; gap:40px; align-items:flex-end; margin-top:30px;">
+        <div style="flex:1;">
+            <div class="field-label">Data</div>
+            <input type="date" class="field-input">
+        </div>
+        <div style="flex:1;">
+            <div class="field-label">Miejscowość</div>
+            <input type="text" class="field-input">
+        </div>
+    </div>
+
+    <div class="signature-block">
+        <div class="signature-box">
+            <div style="min-height:40px;"></div>
+            Czytelny podpis rodzica / opiekuna prawnego
+        </div>
+        <div class="signature-box">
+            <div style="min-height:40px;"></div>
+            Podpis Trenerki (potwierdzenie przyjęcia)
+        </div>
+    </div>
+
+    <p class="note" style="margin-top: 30px;">
+        * W przypadku dzieci powyżej 13. roku życia zalecane jest również złożenie przez nie własnoręcznego podpisu jako wyraz świadomej akceptacji uczestnictwa w treningach.
+    </p>
+
+    <div class="field-block" style="margin-top:20px;">
+        <div class="field-label">Podpis dziecka (powyżej 13. roku życia – opcjonalnie):</div>
+        <div class="field-line" style="width:50%; margin-top:30px;"></div>
+    </div>
+
+    <p class="note" style="margin-top: 24px; text-align: center;">Dokument sporządzono w dwóch jednobrzmiących egzemplarzach – po jednym dla każdej ze stron.</p>
+
+</body>
+</html>

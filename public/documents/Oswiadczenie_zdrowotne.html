@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oświadczenie Zdrowotne – Gym Vibes Aneta Zawiślak</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fff;
+            padding: 40px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 24px 0 8px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+        }
+        p, li { margin-bottom: 6px; }
+        ol, ul { padding-left: 20px; }
+        .section { margin-bottom: 16px; }
+        .field-block {
+            margin: 10px 0 4px;
+        }
+        .field-label {
+            font-size: 11px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 2px;
+        }
+        .field-line {
+            border-bottom: 1px solid #333;
+            min-height: 26px;
+            width: 100%;
+        }
+        .field-line-half {
+            border-bottom: 1px solid #333;
+            min-height: 26px;
+            width: 48%;
+            display: inline-block;
+        }
+        .field-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+        }
+        .field-textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            padding: 4px 2px;
+            outline: none;
+            resize: vertical;
+            display: block;
+            min-height: 52px;
+        }
+        .field-input:focus, .field-textarea:focus {
+            background: #f9f9f9;
+        }
+        .fields-row {
+            display: flex;
+            gap: 4%;
+            margin: 10px 0 4px;
+        }
+        .fields-row .field-col {
+            flex: 1;
+        }
+        .checkbox-section {
+            margin-top: 20px;
+            border: 1px solid #bbb;
+            padding: 16px 20px;
+            border-radius: 4px;
+        }
+        .checkbox-section-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .checkbox-row input[type="checkbox"] {
+            margin-top: 3px;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+        }
+        .answer-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 6px 0 2px;
+        }
+        .answer-row label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .answer-note {
+            font-size: 11px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .question-block {
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #ddd;
+        }
+        .question-block:last-child {
+            border-bottom: none;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .rodo-box {
+            margin-top: 24px;
+            background: #f7f7f7;
+            border: 1px solid #ccc;
+            padding: 14px 18px;
+            font-size: 11px;
+            line-height: 1.6;
+            color: #444;
+            border-radius: 4px;
+        }
+        .rodo-box strong {
+            color: #1a1a1a;
+        }
+        .signature-block {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .signature-box {
+            flex: 1;
+            border-top: 1px solid #333;
+            padding-top: 8px;
+            font-size: 11px;
+            color: #444;
+        }
+        .date-row {
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+        .note {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        @media print {
+            body { padding: 20px; }
+            .no-print { display: none; }
+            .field-input, .field-textarea { background: transparent !important; }
+        }
+        .print-btn {
+            display: block;
+            margin: 0 auto 30px;
+            padding: 10px 28px;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        .print-btn:hover { background: #333; }
+        .warning-box {
+            background: #fff8e1;
+            border-left: 3px solid #f0a500;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 12px;
+            color: #5a4000;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Drukuj / Zapisz PDF</button>
+
+    <h1>Oświadczenie Zdrowotne</h1>
+    <p class="subtitle">Gym Vibes Aneta Zawiślak &nbsp;|&nbsp; NIP 823 157 68 85 &nbsp;|&nbsp; azaw88@wp.pl</p>
+
+    <hr>
+
+    <p>Niniejsze oświadczenie ma na celu zapewnienie bezpieczeństwa podczas treningów/współpracy żywieniowej. Prosimy o dokładne i zgodne z prawdą wypełnienie wszystkich punktów. Informacje zawarte w dokumencie są poufne i służą wyłącznie do celów związanych z planowaniem treningu i/lub jadłospisu.</p>
+
+    <hr>
+
+    <!-- DANE OSOBOWE -->
+    <div class="section">
+        <h2>I. Dane osobowe</h2>
+
+        <div class="field-block">
+            <div class="field-label">Imię i nazwisko</div>
+            <input type="text" class="field-input" autocomplete="name">
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Data urodzenia</div>
+                <input type="date" class="field-input">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Płeć</div>
+                <input type="text" class="field-input" placeholder="np. kobieta / mężczyzna">
+            </div>
+        </div>
+
+        <div class="fields-row">
+            <div class="field-col">
+                <div class="field-label">Wzrost (cm)</div>
+                <input type="text" class="field-input" placeholder="cm">
+            </div>
+            <div class="field-col">
+                <div class="field-label">Aktualna masa ciała (kg)</div>
+                <input type="text" class="field-input" placeholder="kg">
+            </div>
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Adres e-mail</div>
+            <input type="email" class="field-input" autocomplete="email">
+        </div>
+
+        <div class="field-block">
+            <div class="field-label">Numer telefonu</div>
+            <input type="tel" class="field-input" autocomplete="tel">
+        </div>
+    </div>
+
+    <!-- PYTANIA ZDROWOTNE -->
+    <div class="section">
+        <h2>II. Stan zdrowia</h2>
+
+        <div class="warning-box">
+            Prosimy o udzielenie szczerych odpowiedzi. Zatajenie informacji zdrowotnych zwalnia Trenerkę z odpowiedzialności za urazy lub niepożądane reakcje organizmu podczas treningu lub stosowania planu żywieniowego.
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">1. Czy byłeś/byłaś w ostatnim czasie pod opieką lekarza lub jesteś aktualnie?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q1" value="tak"> Tak</label>
+                <label><input type="radio" name="q1" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, z jakiego powodu:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">2. Czy masz zdiagnozowane choroby przewlekłe lub inne schorzenia?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q2" value="tak"> Tak</label>
+                <label><input type="radio" name="q2" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, jakie (np. cukrzyca, nadciśnienie, choroby tarczycy, insulinooporność, PCOS, choroby serca, inne):</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">3. Czy miałeś/miałaś zabiegi operacyjne lub poważne urazy w ciągu ostatnich 5 lat?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q3" value="tak"> Tak</label>
+                <label><input type="radio" name="q3" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz krótko:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">4. Czy masz aktualnie jakieś kontuzje, bóle stawów, kręgosłupa lub inne dolegliwości układu ruchu?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q4" value="tak"> Tak</label>
+                <label><input type="radio" name="q4" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz dokładnie (lokalizacja, charakter bólu, od kiedy):</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">5. Czy masz problemy z układem sercowo-naczyniowym (np. choroba wieńcowa, arytmia, wady serca, zakrzepica)?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q5" value="tak"> Tak</label>
+                <label><input type="radio" name="q5" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">6. Czy kiedykolwiek straciłeś/straciłaś przytomność podczas wysiłku fizycznego lub odczuwałeś/odczuwałaś silne zawroty głowy lub kołatanie serca?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q6" value="tak"> Tak</label>
+                <label><input type="radio" name="q6" value="nie"> Nie</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">7. Czy przyjmujesz na stałe leki lub suplementy diety?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q7" value="tak"> Tak</label>
+                <label><input type="radio" name="q7" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, wymień (nazwa, dawka, pora przyjmowania):</div>
+            <textarea class="field-textarea" rows="3" style="margin-top:4px;"></textarea>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">8. Czy masz stwierdzone alergie lub nietolerancje pokarmowe?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q8" value="tak"> Tak</label>
+                <label><input type="radio" name="q8" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, wymień:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">9. Czy masz alergie na leki, środki chemiczne lub inne substancje?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q9" value="tak"> Tak</label>
+                <label><input type="radio" name="q9" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, wymień:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">10. Czy jesteś w ciąży lub planujesz ciążę?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q10" value="tak"> Tak</label>
+                <label><input type="radio" name="q10" value="nie"> Nie</label>
+                <label><input type="radio" name="q10" value="nd"> Nie dotyczy</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">11. Czy jesteś po porodzie lub po cesarskim cięciu?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q11" value="tak"> Tak</label>
+                <label><input type="radio" name="q11" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, kiedy:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">12. Czy odczuwasz dolegliwości ze strony układu pokarmowego (wzdęcia, zaparcia, biegunki, bóle brzucha, refluks)?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q12" value="tak"> Tak</label>
+                <label><input type="radio" name="q12" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, opisz:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">13. Czy masz historię zaburzeń odżywiania (anoreksja, bulimia, kompulsywne jedzenie)?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q13" value="tak"> Tak</label>
+                <label><input type="radio" name="q13" value="nie"> Nie</label>
+                <label><input type="radio" name="q13" value="wol"> Wolę nie odpowiadać</label>
+            </div>
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">14. Czy są inne istotne informacje zdrowotne, o których powinienem/powinnam wiedzieć?</div>
+            <textarea class="field-textarea" rows="5" style="margin-top:8px;"></textarea>
+        </div>
+    </div>
+
+    <!-- AKTYWNOŚĆ FIZYCZNA -->
+    <div class="section">
+        <h2>III. Aktywność fizyczna</h2>
+
+        <div class="question-block">
+            <div class="question-text">15. Czy aktualnie uprawiasz jakąś aktywność fizyczną?</div>
+            <div class="answer-row">
+                <label><input type="radio" name="q15" value="tak"> Tak</label>
+                <label><input type="radio" name="q15" value="nie"> Nie</label>
+            </div>
+            <div class="field-label" style="margin-top:6px;">Jeśli tak, jaką i jak często:</div>
+            <input type="text" class="field-input" style="margin-top:4px;">
+        </div>
+
+        <div class="question-block" style="border-bottom:none;">
+            <div class="question-text">16. Jak oceniasz swój ogólny poziom aktywności fizycznej?</div>
+            <div class="answer-row" style="flex-wrap:wrap; gap: 14px;">
+                <label><input type="radio" name="q16" value="sedentary"> Siedzący tryb życia</label>
+                <label><input type="radio" name="q16" value="light"> Lekko aktywny</label>
+                <label><input type="radio" name="q16" value="moderate"> Umiarkowanie aktywny</label>
+                <label><input type="radio" name="q16" value="high"> Bardzo aktywny</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- OŚWIADCZENIE I ZGODY -->
+    <div class="section">
+        <h2>IV. Oświadczenia i zgody</h2>
+
+        <div class="checkbox-section">
+            <div class="checkbox-section-title">Proszę zaznaczyć wszystkie pola, które dotyczą Ciebie:</div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl1">
+                <label for="decl1">Oświadczam, że wszystkie podane przeze mnie informacje są zgodne z prawdą i nie zataiłem/zataiłam żadnych istotnych danych dotyczących mojego stanu zdrowia.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl2">
+                <label for="decl2">Oświadczam, że nie mam przeciwwskazań zdrowotnych do podjęcia aktywności fizycznej i/lub stosowania zindywidualizowanego planu żywieniowego. W przypadku wątpliwości konsultowałem/konsultowałam się z lekarzem.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl3">
+                <label for="decl3">Zobowiązuję się do bieżącego informowania Trenerki o wszelkich zmianach w moim stanie zdrowia, które mogą mieć wpływ na przebieg współpracy.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl4">
+                <label for="decl4">Przyjmuję do wiadomości, że Trenerka nie jest lekarzem i jej zalecenia nie zastępują porady medycznej. W przypadku jakichkolwiek wątpliwości zdrowotnych zobowiązuję się do konsultacji z odpowiednim specjalistą.</label>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="decl5">
+                <label for="decl5">Wyrażam zgodę na przechowywanie i przetwarzanie moich danych osobowych oraz informacji zdrowotnych przez Anetę Zawiślak (Gym Vibes) w celu realizacji współpracy, zgodnie z Rozporządzeniem RODO (UE) 2016/679. Dane nie będą przekazywane osobom trzecim.</label>
+            </div>
+        </div>
+
+        <div class="rodo-box">
+            <strong>Klauzula informacyjna RODO:</strong> Administratorem Twoich danych osobowych jest Aneta Zawiślak prowadząca działalność pod marką Gym Vibes, NIP 823 157 68 85, e-mail: azaw88@wp.pl. Dane przetwarzane są w celu realizacji umowy o świadczenie usług trenerskich i/lub żywieniowych (art. 6 ust. 1 lit. b RODO) oraz – w zakresie danych dotyczących zdrowia – na podstawie Twojej wyraźnej zgody (art. 9 ust. 2 lit. a RODO). Przysługuje Ci prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem.
+        </div>
+    </div>
+
+    <!-- PODPIS -->
+    <div class="date-row" style="display:flex; gap:40px; align-items:flex-end; margin-top:30px;">
+        <div style="flex:1;">
+            <div class="field-label">Data wypełnienia</div>
+            <input type="date" class="field-input">
+        </div>
+        <div style="flex:1;">
+            <div class="field-label">Miejscowość</div>
+            <input type="text" class="field-input">
+        </div>
+    </div>
+
+    <div class="signature-block">
+        <div class="signature-box">
+            Czytelny podpis Podopiecznego
+        </div>
+        <div class="signature-box">
+            Podpis Trenerki (potwierdzenie przyjęcia)
+        </div>
+    </div>
+
+    <p class="note" style="margin-top: 30px; text-align: center;">Dokument sporządzono w dwóch jednobrzmiących egzemplarzach – po jednym dla każdej ze stron.</p>
+
+</body>
+</html>
