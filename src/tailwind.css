@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source "../index.html";
+@source "../plan.html";
 
 @theme {
   --font-sans: "Inter", sans-serif;

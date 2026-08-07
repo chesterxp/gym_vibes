@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
+import { resolve } from 'node:path'
 
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1]
 const base = process.env.GITHUB_ACTIONS && repoName ? `/${repoName}/` : './'
@@ -23,5 +24,11 @@ export default defineConfig({
   },
   build: {
     target: 'es2019',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        plans: resolve(__dirname, 'plans/plan_ps.html'),
+      },
+    },
   },
 })
