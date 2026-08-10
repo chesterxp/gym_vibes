@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    width: 1200px;
+  }
+
+  .poster {
+    position: relative;
+    width: 1200px;
+    background:
+      radial-gradient(1200px 500px at 12% 4%, rgba(68, 184, 177, 0.16), transparent 70%),
+      radial-gradient(700px 420px at 88% 18%, rgba(100, 8, 184, 0.14), transparent 70%),
+      #000000;
+    padding: 56px 64px 64px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .brand__mark {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #44b8b1 0%, #6408b8 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px; color: #000;
+  }
+  .brand__name {
+    font-weight: 800; font-size: 20px; letter-spacing: 0.02em;
+  }
+  .brand__name span { color: #44b8b1; }
+
+  .eyebrow {
+    margin: 0;
+    color: #44b8b1;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .title {
+    margin: 10px 0 14px;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.08;
+  }
+  .subtitle {
+    margin: 0 0 28px;
+    font-size: 18px;
+    color: #d1d5db;
+    max-width: 950px;
+    line-height: 1.6;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .chip {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(68, 184, 177, 0.4);
+    background: rgba(68, 184, 177, 0.08);
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+  }
+
+  .grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+
+  .card {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    padding: 28px 30px;
+  }
+  .card h2 {
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .card h2 .dot { color: #44b8b1; }
+  .card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #d1d5db;
+    font-size: 15px;
+  }
+  .card ul, .card ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #d1d5db;
+    line-height: 1.7;
+    font-size: 15px;
+    display: grid;
+    gap: 8px;
+  }
+  .card ol li strong { color: #fff; }
+
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #44b8b1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 44px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(68, 184, 177, 0.25);
+  }
+
+  .programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .program h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 18px;
+    letter-spacing: 0.02em;
+  }
+
+  .table {
+    display: grid;
+    gap: 8px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 2.3fr 0.9fr 0.9fr;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: flex-start;
+  }
+  .row--head {
+    color: #44b8b1;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(68, 184, 177, 0.08);
+    border-color: rgba(68, 184, 177, 0.28);
+    font-weight: 700;
+    align-items: center;
+    padding: 8px 14px;
+  }
+  .ex-title {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .ex-note {
+    display: block;
+    font-size: 12.5px;
+    color: #9ca3af;
+    line-height: 1.5;
+  }
+  .row span.num, .row span.rest {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+  }
+
+  .note-card {
+    margin-top: 28px;
+    padding: 26px 30px;
+    border-radius: 22px;
+    background: rgba(68, 184, 177, 0.06);
+    border: 1px solid rgba(68, 184, 177, 0.25);
+  }
+  .note-card h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .note-card p {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .footer {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+  }
+  .footer b { color: #e5e7eb; }
+</style>
+</head>
+<body>
+  <div class="poster" id="poster">
+
+    <div class="brand">
+      <img src="../../public/nav_logo.png" alt="Logo Gym Vibes" width="150" height="72" />
+    </div>
+
+    <p class="eyebrow">Plan treningowy</p>
+    <h1 class="title">Jack Sparrow</h1>
+    <p class="subtitle">
+      Trening 2 razy w tygodniu z odstępem minimum 2 dni, np. poniedziałek i czwartek.
+      Priorytetem jest technika, pełny zakres ruchu i kontrola obciążenia — nie praca do upadku mięśniowego.
+    </p>
+
+    <div class="chips">
+      <div class="chip">RIR 2-3</div>
+      <div class="chip">Serie główne: 10-12</div>
+      <div class="chip">Izolacje: 12-15</div>
+      <div class="chip">Przerwy złożone: 90-120 s</div>
+      <div class="chip">Przerwy izolacje: 60-90 s</div>
+    </div>
+
+    <div class="grid-two">
+      <div class="card">
+        <h2>Najważniejsze wskazówki</h2>
+        <ul>
+          <li>Dobierz ciężar tak, aby ostatnie 3 powtórzenia były wymagające, ale poprawne technicznie.</li>
+          <li>Po zakończonej serii powinieneś mieć zapas 2-3 powtórzeń (RIR 2-3).</li>
+          <li>Jeśli po 10 powtórzeniach możesz zrobić jeszcze 8-10, ciężar jest za lekki.</li>
+          <li>Jeśli technika siada i pojawia się brak stabilności, ciężar jest za duży.</li>
+          <li>Nie pracuj do upadku mięśniowego — stawiaj na jakość ruchu.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Rozgrzewka <span class="dot">·</span> 8-10 minut</h2>
+        <p style="margin-bottom: 12px;">
+          Wykonuj przed każdym treningiem z cienką gumą. Ma przygotować stawy i mięśnie, bez bólu i mocnego zmęczenia.
+        </p>
+        <ol>
+          <li><strong>Marsz w miejscu + praca ramion</strong> — 60-90 s</li>
+          <li><strong>Band pull-apart</strong> — 2 x 10-15</li>
+          <li><strong>Rotacja zewnętrzna barków</strong> — 2 x 10-12</li>
+          <li><strong>Ściąganie prostych ramion z gumą</strong> — 1-2 x 10-12</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section-title">Trening A</div>
+    <div class="programs">
+      <div class="program" style="grid-column: 1 / -1;">
+        <div class="table">
+          <div class="row row--head">
+            <span>Ćwiczenie</span><span>Serie x powt.</span><span>Przerwa</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">1. Goblet Squat</span><span class="ex-note">Hantel przy klatce piersiowej, proste plecy, w górnej fazie napnij pośladki.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90-120 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">2. Ściąganie drążka wyciągu górnego do klatki</span><span class="ex-note">Ściągnij łopatki, przyciągnij drążek do klatki, powrót powoli.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">3. Wyciskanie hantli na podłodze</span><span class="ex-note">Opuszczaj hantle do dotknięcia ramion o podłogę, dynamicznie wypchnij w górę.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">4. Martwy ciąg rumuński z hantlami</span><span class="ex-note">Cofnij biodra, hantle blisko nóg, proste plecy przez cały ruch.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90-120 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">5. Motylek</span><span class="ex-note">Napnij mięśnie klatki, wróć powoli do pozycji wyjściowej.</span></span>
+            <span class="num">3 x 12-15</span><span class="rest">60 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">6. Unoszenie hantli bokiem</span><span class="ex-note">Łokcie nieco wyżej niż dłonie, opuszczaj ciężar powoli.</span></span>
+            <span class="num">3 x 12-15</span><span class="rest">60 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">7. Prostowanie ramion na wyciągu</span><span class="ex-note">Łokcie przy tułowiu, ruch wykonują wyłącznie przedramiona.</span></span>
+            <span class="num">3 x 10-15</span><span class="rest">60 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">8. Brzuszki na ławce skośnej</span><span class="ex-note">Ruch spokojny i kontrolowany.</span></span>
+            <span class="num">3 x 12-20</span><span class="rest">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Trening B</div>
+    <div class="programs">
+      <div class="program" style="grid-column: 1 / -1;">
+        <div class="table">
+          <div class="row row--head">
+            <span>Ćwiczenie</span><span>Serie x powt.</span><span>Przerwa</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">1. Wykroki z hantlami</span><span class="ex-note">Długi krok, wyprostowana sylwetka, pełna kontrola ruchu.</span></span>
+            <span class="num">3 x 10 / noga</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">2. Wiosłowanie na dolnym wyciągu</span><span class="ex-note">Przyciągnij uchwyt do dolnej części brzucha, najpierw pracują łopatki.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">3. Wyciskanie hantli nad głowę</span><span class="ex-note">Napnij brzuch, nie wyginaj odcinka lędźwiowego.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">4. Prostowanie nóg na atlasie</span><span class="ex-note">Wyprostuj nogi, zatrzymaj ~1 s, powoli opuść ciężar.</span></span>
+            <span class="num">3 x 12-15</span><span class="rest">60-90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">5. Ściąganie drążka podchwytem</span><span class="ex-note">Przyciągaj drążek do klatki piersiowej z pełną kontrolą ciężaru.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">6. Face Pull na wyciągu</span><span class="ex-note">Łokcie szeroko, na końcu ruchu mocno ściągnij łopatki.</span></span>
+            <span class="num">3 x 12-15</span><span class="rest">60 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">7. Uginanie ramion na modlitewniku</span><span class="ex-note">Powoli opuszczaj ciężar, nie odrywaj ramion od podpórki.</span></span>
+            <span class="num">3 x 10-12</span><span class="rest">60 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">8. Dipy na poręczach (lub pompki)</span><span class="ex-note">Jeżeli zbyt trudne, zamień na pompki.</span></span>
+            <span class="num">3 x 6-10</span><span class="rest">90 s</span>
+          </div>
+          <div class="row">
+            <span class="ex-title-wrap"><span class="ex-title">9. Unoszenie nóg na poręczach lub ławce</span><span class="ex-note">Praca mięśni brzucha, nie bujaj ciałem.</span></span>
+            <span class="num">3 x 10-15</span><span class="rest">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <h2>Uwagi końcowe</h2>
+      <p>
+        W każdym ćwiczeniu utrzymuj spokojny, kontrolowany ruch. Koncentruj się na oddechu, stabilizacji i pełnym
+        zakresie. Gdy technika jest poprawna, możesz stopniowo zwiększać ciężar.
+      </p>
+    </div>
+
+    <div class="footer">
+      Gym Vibes © 2026. Spersonalizowany plan treningowy.
+    </div>
+  </div>
+</body>
+</html>

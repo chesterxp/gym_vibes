@@ -27,7 +27,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        plans: resolve(__dirname, 'plans/plan_ps.html'),
+        plans: resolve(__dirname, 'plan.html'),
       },
     },
   },
